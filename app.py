@@ -17,6 +17,17 @@ st.set_page_config(
     layout="wide"
 )
 
+# --- CSS to Hide Streamlit UI Elements ---
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            .stDeployButton {display:none;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 import config
 
 # Use thresholds from config file
